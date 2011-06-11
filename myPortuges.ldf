@@ -1,0 +1,21 @@
+%    \def\prefacename{Pref\'acio}%
+%    \def\refname{Refer\^encias}%
+%    \def\abstractname{Resumo}%
+%    \def\bibname{Refer\^encias Bibliogr\'aficas}%
+%    \def\chaptername{Cap\'{\i}tulo}%
+%    \def\appendixname{Ap\^endice}%
+%    \def\contentsname{Sum\'ario}%
+%    \def\listfigurename{Lista de Figuras}%
+%    \def\listtablename{Lista de Tabelas}%
+%    \def\indexname{\'Indice Remissivo}%
+    \def\figurename{\small Figura}%
+    \def\tablename{\small Tabela}%
+%    \def\partname{Parte}%
+%    \def\enclname{Anexo}%
+%    \def\ccname{C\'opia para}%
+%    \def\headtoname{Para}%
+%    \def\pagename{P\'agina}%
+%    \def\seename{veja}%
+%    \def\alsoname{veja tamb\'em}%
+%    \def\proofname{Demonstra\c{c}\~ao}%
+    \def\glossaryname{Gloss\'ario}%

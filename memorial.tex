@@ -1,0 +1,132 @@
+%-------------------------------------------------------------------------------
+% Arquivo: 		memorial.tex
+% Autor:			Ivan Ramos Pagnossin
+% Descrição:	Memorial escrito para o concurso de admissão de docente no Instituto de Física da Universidade de São Paulo
+%-------------------------------------------------------------------------------
+%\documentclass[a4paper,10pt]{scrbook}					% Sub-classe koma-script
+%\documentclass[a4paper,12pt]{scrbook}
+\documentclass[a4paper,12pt]{scrreprt}
+
+	%
+	% Pacotes necessários.
+	%
+	\usepackage[brazil]{babel}								% Idioma português
+	\usepackage[ansinew]{inputenc}							% Caracteres acentuados
+	\usepackage[T1]{fontenc}								% Fontes de 16 bits
+	\usepackage{color}										% Cores
+	\usepackage[a4paper]{geometry}						% Formatação de página
+	%\usepackage{makeidx}										% Índice remissivo
+	%\usepackage[colorlinks=false]{hyperref}			% Hiper-texto
+	%\usepackage{graphicx}									% Figuras
+	\usepackage{indentfirst}								% Indentação do primeiro parágrafo de cada seção
+	%\usepackage{psfrag}										% Manuseio de figuras EPS
+	\usepackage{setspace}									% Espaçamento entre-linhas
+	%\usepackage[squaren,binary]{SIunits}				% Sistema internacional de unidades
+	%\usepackage{ccaption}									% Captions personalizados
+	%\usepackage{capt-of}										% Junção de figuras e tabelas num único float
+	%\usepackage{subfigure}									% Sub-figuras, e.g., fig.1(a), fig.3(c)
+	%\usepackage{quotchap}									% Melhora o visual dos capítulos
+	%\usepackage{mathrsfs}									% Comando \mathscr
+	%\usepackage{bbm}											% Comando \mathbbr
+	%\usepackage{textcomp}									% Comando \textasciicaron
+	%\usepackage{stmaryrd}									% Comandos \llbracket e \rrbracket
+	\usepackage{amsmath}										% Environments e comandos da American Mathematical Society	
+	%\usepackage{upgreek}										% Símbolo \uptau
+	%\usepackage{pifont}										% Símbolos \ding{172} até \ding{176}
+	%\usepackage{amssymb}										% Símbolos da American Mathematical Society
+	\usepackage{paralist}									% Environment "compactitem"
+	%\usepackage{icomma}										% Retira o espaço entre a vírgula e a parte decimal de um número
+	%\usepackage{colortbl}									% Cores em tabelas
+	%\usepackage{irpagnossin}
+	%\usepackage[innercaption]{sidecap}
+	%\usepackage{wasysym}
+	%\usepackage{pxfonts}
+	%\usepackage{wrapfig}
+	%\usepackage[square,numbers]{natbib}
+	%\usepackage{amsfonts}
+	\usepackage{lipsum}
+
+%\numberwithin{equation}{chapter}
+%\numberwithin{table}{chapter}
+%\numberwithin{figure}{chapter} 
+
+
+	%
+	% Definições úteis.
+	%
+
+	% Redefine a área ocupada pelo texto.
+	%\setlength\textheight{615pt}
+	%\setlength\textwidth{435pt}
+	%\setlength\oddsidemargin{37pt}
+	%\setlength\evensidemargin{-16.54pt}
+	%\setlength\marginparwidth{26pt}
+	%\renewcommand\footnoterule{\noindent\rule[1pt]{\textwidth}{0.2pt}}
+
+	% Insere minhas definições de formato (REORGANIZAR).
+	\input{myPortuges.ldf}
+
+	% Impede que o texto seja uniformemente distribuído na vertical.
+	\raggedbottom
+
+	% Espaço entre-linhas: 30% maior que o normal.
+	\setstretch{1.3}
+
+	% Configuração manual da divisão silábica de algumas palavras.
+	\hyphenation{}
+
+	% Macros úteis.
+	%\newcommand\foreign[1]{\textsl{#1}}
+
+%-------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
+%	Aqui começa o documento propriamente dito.
+%-------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
+
+\begin{document}
+
+	\pagenumbering{roman}
+
+	% Dedicatória.
+	\input{dedicatoria}
+	\pagebreak
+
+	% Agradecimentos.
+	%\section*{Agradecimentos}
+	%\input{agradecimentos}
+	%\pagebreak
+
+	% Resumo.
+	%\addcontentsline{toc}{chapter}{Resumo/\foreign{Abstract}}
+	%\input{resumo}\pagebreak
+
+	% Sumário.
+	%\tableofcontents
+
+	% Prefácio
+	\pagebreak
+	\pagenumbering{arabic}
+	\setcounter{page}{1}
+
+	% Capítulo 1: introdução
+	%\chapter{Introdução}
+	%\label{cap:introducao}
+	\input{textual}
+
+	% Apêndices
+	%\appendix
+
+	%\chapter{Lista de símbolos}
+	%\label{ap:A}
+	%\input{apA}
+
+
+	% Bibliografia
+	%\pagebreak
+	%\addcontentsline{toc}{chapter}{Bibliografia}
+	%\bibliographystyle{Science}
+	%\bibliography{referencias}
+
+\end{document}
+%-------------------------------------------------------------------------------

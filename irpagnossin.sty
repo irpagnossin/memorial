@@ -1,0 +1,108 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	File:					irpackage.sty
+% Author:				Ivan Ramos Pagnossin
+%	Last update:	30/06/2002
+% Dependencies:	color, ifthen, inputenc, babel
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\NeedsTeXFormat{LaTeX2e}[1995/12/01]
+\ProvidesPackage{irpagnossin}[2002/09/05 v1.0  My definitions]
+
+%-------------------------------------------------------------------------
+% Pacotes necessários e/ou comumente utilizados.
+%-------------------------------------------------------------------------
+\RequirePackage{color,ifthen}
+\RequirePackage[latin1]{inputenc}
+\RequirePackage[brazil]{babel}
+\RequirePackage{SIunits}
+\RequirePackage{amstext}
+%-------------------------------------------------------------------------
+% Comandos de texto.
+%-------------------------------------------------------------------------
+\newcommand\foreign[1]{\textsl{#1}}						% para termos em outras línguas.
+\newcommand\newterm[1]{\textbf{#1}}						% para termos novos.
+
+\newcommand\eg     			{\foreign{e.g.}}      % exempli gratia
+\newcommand\ie     			{\foreign{i.e.}}      % id est
+\newcommand\etc    			{\foreign{etc}}       % etcetera
+\newcommand\etal   			{\foreign{et al}}     % et al 
+
+\newcommand\parameter[1]{$\langle$#1$\rangle$}
+
+
+%-------------------------------------------------------------------------
+% Comandos de expressões matemática.
+%-------------------------------------------------------------------------
+\renewcommand\vector[1]		{\ensuremath{\boldsymbol{#1}}}
+
+\newcommand\kBoltzmann	{\ensuremath{k_B}}
+\newcommand\monolayer		{\text{MC}}
+\newcommand\eCharge			{\text{e}}
+\newcommand\mEff				{\ensuremath{m^*}}
+\newcommand\sample[1]   {\ensuremath{\sharp#1}}
+
+	\newcommand\alturaLinha		{\rule[-.7ex]{0pt}{3ex}}
+	\newcommand\especie[1]		{\ensuremath{\mathrm{#1}}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	Idêntico ao comando \cite mas aparece como sobrescrito colorido.
+%	Argumentos:	1º - Página a se consultar (opcional).
+%							2º - Referência.
+%	obs.: A cor pode ser alterada redefinindo-se o comando \upcitecolor.
+%	ex.: \upcite[pág. 5]{schrödinger}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\upcitesize}{\tiny}%
+\newcommand{\upcitecolor}{blue}%
+\newcommand{\upcite}[2][\null]%
+	{%
+	\ifthenelse{\equal{#1}{\null}}%
+		{\ensuremath{^{\color{\upcitecolor}\mbox{\upcitesize\cite    {#2}}}}}%
+		{\ensuremath{^{\color{\upcitecolor}\mbox{\upcitesize\cite[#1]{#2}}}}}%
+	}%
+	
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	Argumento: Cor da palavra "Exercício X" (opcional)
+% \begin{exercicio} ... \end{exercicio}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcounter{exercicio}%
+\newenvironment{exercicio}[1][black]%
+	{\vspace{5mm}\stepcounter{exercicio}%
+	\begin{quotation}%
+	{\color{#1}{\bfseries Exercício \arabic{exercicio}.}}\slshape}%
+  {\end{quotation}\vspace{5mm}}%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \ope - Operador escalar
+% \opv - Operador vetorial
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\ope}[1]{\ensuremath{\mathrm{\hat{#1}}}}%
+\newcommand{\opv}[1]{\ensuremath{\mathbf{\hat{#1}}}}%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Vetor "Ket" e função linear "Bra"
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\bra}[1]{\ensuremath{\langle#1|}}%
+\newcommand{\ket}[1]{\ensuremath{|#1\rangle}}%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	Define o produto interno de vetores do espaço de Hilbert
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\iprod}[2]{\ensuremath{\langle#1|#2\rangle}}%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	Define o valor esperado de um operador (argumento 2)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\hope}[3]{\ensuremath{\langle#1|#2|#3\rangle}}%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	A média do argumento 1
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\med}[1]{\langle #1 \rangle}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Derivadas parcial (\parcial) e total (\derivada).
+%	Argumentos:	1º - Ordem da derivada (opcional).
+%							2º - Função a ser derivada.
+%							3º - Variável de derivação.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\parcial}[3][]{\ensuremath{{\partial^{#1}#2\over\partial #3^{#1}}}}
+\newcommand{\derivada}[3][]{\ensuremath{{d^{#1}#2\over d #3^{#1}}}}
