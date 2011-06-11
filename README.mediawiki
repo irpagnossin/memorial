@@ -1,1 +1,2 @@
+== Memorial ==
 Este repositório contém o meu memorial, inicialmente escrito para o concurso de vaga de docente em Física na Universidade de São Paulo para o projeto UNIVESP - Universidade Virtual do Estado de São Paulo, em junho de 2011.
