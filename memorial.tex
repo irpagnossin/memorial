@@ -3,9 +3,9 @@
 % Autor:			Ivan Ramos Pagnossin
 % Descrição:	Memorial escrito para o concurso de admissão de docente no Instituto de Física da Universidade de São Paulo
 %-------------------------------------------------------------------------------
-%\documentclass[a4paper,10pt]{scrbook}					% Sub-classe koma-script
+\documentclass[a4paper,12pt]{scrbook}					% Sub-classe koma-script
 %\documentclass[a4paper,12pt]{scrbook}
-\documentclass[a4paper,12pt]{scrreprt}
+%\documentclass[a4paper,10pt]{scrartcl}
 
 	%
 	% Pacotes necessários.
@@ -13,15 +13,15 @@
 	\usepackage[brazil]{babel}								% Idioma português
 	\usepackage[ansinew]{inputenc}							% Caracteres acentuados
 	\usepackage[T1]{fontenc}								% Fontes de 16 bits
-	\usepackage{color}										% Cores
-	\usepackage[a4paper]{geometry}						% Formatação de página
+	\usepackage{xcolor}										% Cores
+	\usepackage[a4paper, top=3cm, left=3cm, right=2cm, bottom=2cm, includefoot]{geometry}						% Formatação de página
 	%\usepackage{makeidx}										% Índice remissivo
 	%\usepackage[colorlinks=false]{hyperref}			% Hiper-texto
 	%\usepackage{graphicx}									% Figuras
 	\usepackage{indentfirst}								% Indentação do primeiro parágrafo de cada seção
 	%\usepackage{psfrag}										% Manuseio de figuras EPS
 	\usepackage{setspace}									% Espaçamento entre-linhas
-	%\usepackage[squaren,binary]{SIunits}				% Sistema internacional de unidades
+	\usepackage[squaren,binary]{SIunits}				% Sistema internacional de unidades
 	%\usepackage{ccaption}									% Captions personalizados
 	%\usepackage{capt-of}										% Junção de figuras e tabelas num único float
 	%\usepackage{subfigure}									% Sub-figuras, e.g., fig.1(a), fig.3(c)
@@ -44,7 +44,8 @@
 	%\usepackage{wrapfig}
 	%\usepackage[square,numbers]{natbib}
 	%\usepackage{amsfonts}
-	\usepackage{lipsum}
+  %\usepackage{lipsum}
+  \usepackage{url}
 
 %\numberwithin{equation}{chapter}
 %\numberwithin{table}{chapter}
@@ -54,7 +55,9 @@
 	%
 	% Definições úteis.
 	%
-
+	\newcommand\foreign[1]{\textsl{#1}}
+	\newcommand\edital[1]{\textcolor{green!30!black}{#1}}
+	\newcommand\profa{Prof\rlap.\textordfeminine}
 	% Redefine a área ocupada pelo texto.
 	%\setlength\textheight{615pt}
 	%\setlength\textwidth{435pt}
@@ -84,13 +87,22 @@
 %-------------------------------------------------------------------------------
 %-------------------------------------------------------------------------------
 
+	\title{Memorial e projeto de pesquisa}
+	\subtitle{apresentado para o provimento...}
+	\author{Ivan Ramos Pagnossin}
+	\date{junho de 2011}
+
 \begin{document}
+
+	\maketitle
+
+	\tableofcontents
 
 	\pagenumbering{roman}
 
 	% Dedicatória.
-	\input{dedicatoria}
-	\pagebreak
+	%\input{dedicatoria}
+	%\pagebreak
 
 	% Agradecimentos.
 	%\section*{Agradecimentos}
@@ -112,7 +124,17 @@
 	% Capítulo 1: introdução
 	%\chapter{Introdução}
 	%\label{cap:introducao}
-	\input{textual}
+	\input{introducao}
+	
+	\input{formacao-academica}
+	
+	\input{formacao-profissional}
+	
+	\input{perspectivas}
+	
+	\input{projeto-pesquisa}
+	
+	\input{referencias}
 
 	% Apêndices
 	%\appendix
