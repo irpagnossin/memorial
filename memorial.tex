@@ -1,11 +1,9 @@
 %-------------------------------------------------------------------------------
 % Arquivo: 		memorial.tex
 % Autor:			Ivan Ramos Pagnossin
-% Descrição:	Memorial escrito para o concurso de admissão de docente no Instituto de Física da Universidade de São Paulo
+% Descrição:	Memorial escrito para o concurso de admissão de docente no IFUSP
 %-------------------------------------------------------------------------------
 \documentclass[a4paper,12pt]{scrbook}					% Sub-classe koma-script
-%\documentclass[a4paper,12pt]{scrbook}
-%\documentclass[a4paper,10pt]{scrartcl}
 
 	%
 	% Pacotes necessários.
@@ -13,44 +11,17 @@
 	\usepackage[brazil]{babel}								% Idioma português
 	\usepackage[ansinew]{inputenc}							% Caracteres acentuados
 	\usepackage[T1]{fontenc}								% Fontes de 16 bits
+	\usepackage{fouriernc}
 	\usepackage{xcolor}										% Cores
 	\usepackage[a4paper, top=3cm, left=3cm, right=2cm, bottom=2cm, includefoot]{geometry}						% Formatação de página
-	%\usepackage{makeidx}										% Índice remissivo
-	%\usepackage[colorlinks=false]{hyperref}			% Hiper-texto
-	%\usepackage{graphicx}									% Figuras
 	\usepackage{indentfirst}								% Indentação do primeiro parágrafo de cada seção
-	%\usepackage{psfrag}										% Manuseio de figuras EPS
 	\usepackage{setspace}									% Espaçamento entre-linhas
 	\usepackage[squaren,binary]{SIunits}				% Sistema internacional de unidades
-	%\usepackage{ccaption}									% Captions personalizados
-	%\usepackage{capt-of}										% Junção de figuras e tabelas num único float
-	%\usepackage{subfigure}									% Sub-figuras, e.g., fig.1(a), fig.3(c)
-	%\usepackage{quotchap}									% Melhora o visual dos capítulos
-	%\usepackage{mathrsfs}									% Comando \mathscr
-	%\usepackage{bbm}											% Comando \mathbbr
-	%\usepackage{textcomp}									% Comando \textasciicaron
-	%\usepackage{stmaryrd}									% Comandos \llbracket e \rrbracket
 	\usepackage{amsmath}										% Environments e comandos da American Mathematical Society	
-	%\usepackage{upgreek}										% Símbolo \uptau
-	%\usepackage{pifont}										% Símbolos \ding{172} até \ding{176}
-	%\usepackage{amssymb}										% Símbolos da American Mathematical Society
 	\usepackage{paralist}									% Environment "compactitem"
-	%\usepackage{icomma}										% Retira o espaço entre a vírgula e a parte decimal de um número
-	%\usepackage{colortbl}									% Cores em tabelas
-	%\usepackage{irpagnossin}
-	%\usepackage[innercaption]{sidecap}
-	%\usepackage{wasysym}
-	%\usepackage{pxfonts}
-	%\usepackage{wrapfig}
-	%\usepackage[square,numbers]{natbib}
-	%\usepackage{amsfonts}
-  %\usepackage{lipsum}
   \usepackage{url}
-
-%\numberwithin{equation}{chapter}
-%\numberwithin{table}{chapter}
-%\numberwithin{figure}{chapter} 
-
+  \usepackage{fancyhdr}
+  \usepackage[symbol,norule,flushmargin]{footmisc}
 
 	%
 	% Definições úteis.
@@ -61,13 +32,6 @@
 	\newcommand\etc{\foreign{etc}}
 	\newcommand\dra{Dr\rlap.\textordfeminine}
 	\newcommand\ie{\foreign{ie}}
-	% Redefine a área ocupada pelo texto.
-	%\setlength\textheight{615pt}
-	%\setlength\textwidth{435pt}
-	%\setlength\oddsidemargin{37pt}
-	%\setlength\evensidemargin{-16.54pt}
-	%\setlength\marginparwidth{26pt}
-	%\renewcommand\footnoterule{\noindent\rule[1pt]{\textwidth}{0.2pt}}
 
 	% Insere minhas definições de formato (REORGANIZAR).
 	\input{myPortuges.ldf}
@@ -81,19 +45,32 @@
 	% Configuração manual da divisão silábica de algumas palavras.
 	\hyphenation{}
 
-	% Macros úteis.
-	%\newcommand\foreign[1]{\textsl{#1}}
+	% Configuração dos cabeçalhos e rodapés
+	\pagestyle{fancy}
+	\fancyhead{}
+	\fancyhead[LE]{I. R. Pagnossin}
+	\fancyhead[RE]{}
+	\fancyhead[LO]{}
+	\fancyhead[RO]{Memorial e projeto de pesquisa}
+	\fancyfoot{}
+	\fancyfoot[LE,RO]{\thepage}
+	\fancyfoot[RE,LO]{}
+	\renewcommand\footrulewidth{0.4pt}
+	
+	% Configuração das notas de rodapé
+	\setfnsymbol{lamport}
 
+	% Configuração da capa
+	\title{Memorial e projeto de pesquisa}
+	\subtitle{apresentado para o provimento de um cargo de Professor Doutor junto ao Departamento de Física Experimental do Instituto de Física da Universidade de São Paulo}
+	\author{Ivan Ramos Pagnossin}
+	
 %-------------------------------------------------------------------------------
 %-------------------------------------------------------------------------------
 %	Aqui começa o documento propriamente dito.
 %-------------------------------------------------------------------------------
 %-------------------------------------------------------------------------------
 
-	\title{Memorial e projeto de pesquisa}
-	\subtitle{apresentado para o provimento...}
-	\author{Ivan Ramos Pagnossin}
-	\date{junho de 2011}
 
 \begin{document}
 
@@ -103,55 +80,23 @@
 
 	\pagenumbering{roman}
 
-	% Dedicatória.
-	%\input{dedicatoria}
-	%\pagebreak
-
-	% Agradecimentos.
-	%\section*{Agradecimentos}
-	%\input{agradecimentos}
-	%\pagebreak
-
-	% Resumo.
-	%\addcontentsline{toc}{chapter}{Resumo/\foreign{Abstract}}
-	%\input{resumo}\pagebreak
-
-	% Sumário.
-	%\tableofcontents
-
 	% Prefácio
 	\pagebreak
 	\pagenumbering{arabic}
 	\setcounter{page}{1}
-
-	% Capítulo 1: introdução
-	%\chapter{Introdução}
-	%\label{cap:introducao}
+	
 	\input{introducao}
-	
 	\input{formacao-academica}
-	
 	\input{formacao-profissional}
-	
 	\input{perspectivas}
-	
 	\input{projeto-pesquisa}
 	
-	\input{referencias}
-
 	% Apêndices
-	%\appendix
-
-	%\chapter{Lista de símbolos}
-	%\label{ap:A}
-	%\input{apA}
-
-
-	% Bibliografia
-	%\pagebreak
-	%\addcontentsline{toc}{chapter}{Bibliografia}
-	%\bibliographystyle{Science}
-	%\bibliography{referencias}
+	\appendix
+	
+	\input{resumo}
+	\input{referencias}
+	\addcontentsline{toc}{chapter}{Referências}
 
 \end{document}
 %-------------------------------------------------------------------------------
