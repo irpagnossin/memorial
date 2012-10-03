@@ -1,21 +1,21 @@
 %-------------------------------------------------------------------------------
 % Arquivo: 		memorial.tex
 % Autor:			Ivan Ramos Pagnossin
-% Descrição:	Memorial escrito para o concurso de admissão de docente no IFUSP
+% DescriÃ§Ã£o:	Memorial escrito para o concurso de admissÃ£o de docente no IFUSP
 %-------------------------------------------------------------------------------
 \documentclass[a4paper,12pt]{scrbook}					% Sub-classe koma-script
 
 	%
-	% Pacotes necessários.
+	% Pacotes necessÃ¡rios.
 	%
-	\usepackage[brazil]{babel}								% Idioma português
-	\usepackage[ansinew]{inputenc}							% Caracteres acentuados
+	\usepackage[brazil]{babel}								% Idioma portuguÃªs
+	\usepackage[utf8]{inputenc}							% Caracteres acentuados
 	\usepackage[T1]{fontenc}								% Fontes de 16 bits
 	\usepackage{fouriernc}
 	\usepackage{xcolor}										% Cores
-	\usepackage[a4paper, top=3cm, left=3cm, right=2cm, bottom=2cm, includefoot]{geometry}						% Formatação de página
-	\usepackage{indentfirst}								% Indentação do primeiro parágrafo de cada seção
-	\usepackage{setspace}									% Espaçamento entre-linhas
+	\usepackage[a4paper, top=3cm, left=3cm, right=2cm, bottom=2cm, includefoot]{geometry}						% FormataÃ§Ã£o de pÃ¡gina
+	\usepackage{indentfirst}								% IndentaÃ§Ã£o do primeiro parÃ¡grafo de cada seÃ§Ã£o
+	\usepackage{setspace}									% EspaÃ§amento entre-linhas
 	\usepackage[squaren,binary]{SIunits}				% Sistema internacional de unidades
 	\usepackage{amsmath}										% Environments e comandos da American Mathematical Society	
 	\usepackage{paralist}									% Environment "compactitem"
@@ -24,7 +24,7 @@
   \usepackage[symbol,norule,flushmargin]{footmisc}
 
 	%
-	% Definições úteis.
+	% DefiniÃ§Ãµes Ãºteis.
 	%
 	\newcommand\foreign[1]{\textsl{#1}}
 	\newcommand\edital[1]{\textbf{#1}}%\textcolor{green!30!black}{#1}}
@@ -33,19 +33,19 @@
 	\newcommand\dra{Dr\rlap.\textordfeminine}
 	\newcommand\ie{\foreign{ie}}
 
-	% Insere minhas definições de formato (REORGANIZAR).
+	% Insere minhas definiÃ§Ãµes de formato (REORGANIZAR).
 	\input{myPortuges.ldf}
 
-	% Impede que o texto seja uniformemente distribuído na vertical.
+	% Impede que o texto seja uniformemente distribuÃ­do na vertical.
 	\raggedbottom
 
-	% Espaço entre-linhas: 30% maior que o normal.
+	% EspaÃ§o entre-linhas: 30% maior que o normal.
 	\setstretch{1.3}
 
-	% Configuração manual da divisão silábica de algumas palavras.
+	% ConfiguraÃ§Ã£o manual da divisÃ£o silÃ¡bica de algumas palavras.
 	\hyphenation{}
 
-	% Configuração dos cabeçalhos e rodapés
+	% ConfiguraÃ§Ã£o dos cabeÃ§alhos e rodapÃ©s
 	\pagestyle{fancy}
 	\fancyhead{}
 	\fancyhead[LE]{I. R. Pagnossin}
@@ -57,17 +57,17 @@
 	\fancyfoot[RE,LO]{}
 	\renewcommand\footrulewidth{0.4pt}
 	
-	% Configuração das notas de rodapé
+	% ConfiguraÃ§Ã£o das notas de rodapÃ©
 	\setfnsymbol{lamport}
 
-	% Configuração da capa
+	% ConfiguraÃ§Ã£o da capa
 	\title{Memorial e projeto de pesquisa}
-	\subtitle{apresentado para o provimento de um cargo de Professor Doutor junto ao Departamento de Física Experimental do Instituto de Física da Universidade de São Paulo}
+	\subtitle{apresentado para o provimento de um cargo de Professor Doutor junto ao Departamento de FÃ­sica Experimental do Instituto de FÃ­sica da Universidade de SÃ£o Paulo}
 	\author{Ivan Ramos Pagnossin}
 	
 %-------------------------------------------------------------------------------
 %-------------------------------------------------------------------------------
-%	Aqui começa o documento propriamente dito.
+%	Aqui comeÃ§a o documento propriamente dito.
 %-------------------------------------------------------------------------------
 %-------------------------------------------------------------------------------
 
@@ -80,7 +80,7 @@
 
 	\pagenumbering{roman}
 
-	% Prefácio
+	% PrefÃ¡cio
 	\pagebreak
 	\pagenumbering{arabic}
 	\setcounter{page}{1}
@@ -91,12 +91,12 @@
 	\input{perspectivas}
 	\input{projeto-pesquisa}
 	
-	% Apêndices
+	% ApÃªndices
 	\appendix
 	
 	\input{resumo}
 	\input{referencias}
-	\addcontentsline{toc}{chapter}{Referências}
+	\addcontentsline{toc}{chapter}{ReferÃªncias}
 
 \end{document}
 %-------------------------------------------------------------------------------
