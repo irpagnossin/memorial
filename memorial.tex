@@ -22,6 +22,7 @@
   \usepackage{url}
   \usepackage{fancyhdr}
   \usepackage[symbol,norule,flushmargin]{footmisc}
+    \usepackage{hyperref}
 
 	%
 	% Definições úteis.
@@ -51,7 +52,7 @@
 	\fancyhead[LE]{I. R. Pagnossin}
 	\fancyhead[RE]{}
 	\fancyhead[LO]{}
-	\fancyhead[RO]{Memorial e projeto de pesquisa}
+	\fancyhead[RO]{Memorial}
 	\fancyfoot{}
 	\fancyfoot[LE,RO]{\thepage}
 	\fancyfoot[RE,LO]{}
@@ -61,8 +62,7 @@
 	\setfnsymbol{lamport}
 
 	% Configuração da capa
-	\title{Memorial e projeto de pesquisa}
-	\subtitle{apresentado para o provimento de um cargo de Professor Doutor junto ao Departamento de Física Experimental do Instituto de Física da Universidade de São Paulo}
+	\title{Memorial circunstanciado}
 	\author{Ivan Ramos Pagnossin}
 	
 %-------------------------------------------------------------------------------
@@ -75,21 +75,18 @@
 \begin{document}
 
 	\maketitle
-
-	\tableofcontents
-
-	\pagenumbering{roman}
+	%\tableofcontents
+	%\pagenumbering{roman}
 
 	% Prefácio
-	\pagebreak
-	\pagenumbering{arabic}
-	\setcounter{page}{1}
+	%\pagebreak
+	%\pagenumbering{arabic}
+	%\setcounter{page}{1}
 	
 	\input{introducao}
 	\input{formacao-academica}
 	\input{formacao-profissional}
 	\input{perspectivas}
-	\input{projeto-pesquisa}
 	
 	% Apêndices
 	\appendix
