@@ -3,7 +3,7 @@
 % Autor:			Ivan Ramos Pagnossin
 % Descrição:	Memorial escrito para o concurso de admissão de docente no IFUSP
 %-------------------------------------------------------------------------------
-\documentclass[a4paper,12pt]{scrbook}					% Sub-classe koma-script
+\documentclass[a4paper,12pt,twoside]{scrartcl}					% Sub-classe koma-script
 
 	%
 	% Pacotes necessários.
@@ -22,13 +22,14 @@
   \usepackage{url}
   \usepackage{fancyhdr}
   \usepackage[symbol,norule,flushmargin]{footmisc}
-    \usepackage{hyperref}
+    \usepackage[colorlinks=true,linkcolor=blue,urlcolor=blue]{hyperref}
+      \usepackage{graphicx}
 
 	%
 	% Definições úteis.
 	%
-	\newcommand\foreign[1]{\textsl{#1}}
-	\newcommand\edital[1]{\textbf{#1}}%\textcolor{green!30!black}{#1}}
+	\newcommand\foreign[1]{\textnormal{#1}}
+	\newcommand\edital[1]{\textnormal{#1}}%\textcolor{green!30!black}{#1}}
 	\newcommand\profa{Prof\rlap.\textordfeminine}
 	\newcommand\etc{\foreign{etc}}
 	\newcommand\dra{Dr\rlap.\textordfeminine}
@@ -52,7 +53,7 @@
 	\fancyhead[LE]{I. R. Pagnossin}
 	\fancyhead[RE]{}
 	\fancyhead[LO]{}
-	\fancyhead[RO]{Memorial}
+	\fancyhead[RO]{{\footnotesize Memorial circunstanciado}}
 	\fancyfoot{}
 	\fancyfoot[LE,RO]{\thepage}
 	\fancyfoot[RE,LO]{}
@@ -64,6 +65,8 @@
 	% Configuração da capa
 	\title{Memorial circunstanciado}
 	\author{Ivan Ramos Pagnossin}
+	
+	\hyphenation{E-le-trô-ni-ca E-le-tro-pi-e-zo dou-to-ra-do pe-da-gó-gi-co do-mi-nar e-xa-me gra-du-a-ção he-te-ro-es-tru-tu-ras re-gis-tra-do a-pre-sen-ta-ção}
 	
 %-------------------------------------------------------------------------------
 %-------------------------------------------------------------------------------
@@ -91,8 +94,9 @@
 	% Apêndices
 	\appendix
 	
-	\input{resumo}
-	\input{referencias}
+	\input{adendo}
+	\input{resumo}	
+	\input{referencias}	
 	\addcontentsline{toc}{chapter}{Referências}
 
 \end{document}
